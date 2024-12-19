@@ -1,3 +1,3 @@
-/home/fer/Documents/prog6_for_3_IM23_02B_IMIFI/build/CMakeFiles/prog6_3_im23_02b.dir
-/home/fer/Documents/prog6_for_3_IM23_02B_IMIFI/build/CMakeFiles/edit_cache.dir
-/home/fer/Documents/prog6_for_3_IM23_02B_IMIFI/build/CMakeFiles/rebuild_cache.dir
+/home/mcf/Documents/prog6_for_3_IM23_02B_IMIFI/build/CMakeFiles/prog6_3_im23_02b.dir
+/home/mcf/Documents/prog6_for_3_IM23_02B_IMIFI/build/CMakeFiles/edit_cache.dir
+/home/mcf/Documents/prog6_for_3_IM23_02B_IMIFI/build/CMakeFiles/rebuild_cache.dir

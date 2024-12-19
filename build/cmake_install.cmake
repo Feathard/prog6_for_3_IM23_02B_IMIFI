@@ -1,4 +1,4 @@
-# Install script for directory: /home/fer/Documents/prog6_for_3_IM23_02B_IMIFI
+# Install script for directory: /home/mcf/Documents/prog6_for_3_IM23_02B_IMIFI
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/fer/Documents/prog6_for_3_IM23_02B_IMIFI/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/mcf/Documents/prog6_for_3_IM23_02B_IMIFI/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
