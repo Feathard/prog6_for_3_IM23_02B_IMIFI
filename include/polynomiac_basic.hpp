@@ -24,6 +24,8 @@ public:
     polynomial (int range_min, int range_max, unsigned deg); /// Инициализация многочлена степени deg и коэффицентам 
     // * в диапозоне от range_min до range_max | done
     polynomial (unsigned dg);   /// Инициализация с преаллокацией
+    polynomial (std::vector<double>);
+#if POLYNOMIAL_BASIC_HPP_OPERATIONS
     polynomial operator+ (polynomial&) const;   /// Сложение многочленов
     polynomial operator- (polynomial&) const;   /// Вычитание многочленов 
     polynomial operator+ (void) const; /// Сложение многочленов
@@ -32,14 +34,17 @@ public:
     polynomial operator/ (polynomial&) const;   /// Деление многочленов (основная часть)
     polynomial operator% (polynomial&) const;   /// Деление многочленов (остаток)
     polynomial derivative(polynomial&) const ;  /// Произваодная многочлена
-    polynomial operator= (polynomial&);         /// Присваивание многочлена | done
-    bool operator==(polynomial&) const; /// Сравнение многочленов | done
-    bool operator!=(polynomial&) const; /// Сравнение многочленов | done
     polynomial operator+=(polynomial&); /// Прибавление многочлена с присваиванием
     polynomial operator-=(polynomial&); /// Вычитание многочлена с присваиванием
     polynomial operator*=(polynomial&); /// Умножение многочленов с присваиванием
     polynomial operator/=(polynomial&); /// Деление многочленов с присваиванием
     polynomial operator%=(polynomial&); /// Остаток от дедения многочленов с присваиванием
+#endif //POLYNOMIAL_BASIC_HPP_OPERATIONS
+    
+    polynomial& operator= (polynomial&);         /// Присваивание многочлена | done
+    bool operator==(polynomial&) const; /// Сравнение многочленов | done
+    bool operator!=(polynomial&) const; /// Сравнение многочленов | done
+    
     double at (unsigned) const;         /// * Возвращает значение соответствующего коэффицента (аналог геттера) | done
     void set (unsigned, double);       
     void set (std::initializer_list<double>);

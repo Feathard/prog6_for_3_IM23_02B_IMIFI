@@ -1,9 +1,13 @@
 #include "polynomiac_basic.hpp"
 
+polynomial::polynomial ( void ) : deegree(0) {}
+
+polynomial::polynomial ( std::vector<double> vec) : coeff(vec), deegree(vec.size()-1) {}
 
 polynomial::polynomial (unsigned dg) : deegree(dg), coeff(dg+1) {}
-polynomial::polynomial ( void ) : deegree(0) {}
+
 polynomial::polynomial (polynomial & other) : deegree(other.deegree), coeff(other.coeff) {}
+
 polynomial::polynomial (std::initializer_list<double> il) : deegree (il.size()-1)
 {
     coeff = il;
@@ -49,7 +53,7 @@ bool polynomial::operator!= (polynomial & other) const
     return (deegree != other.deegree) or (coeff != other.coeff);
 }
 
-polynomial polynomial::operator= (polynomial & other)
+polynomial& polynomial::operator= (polynomial & other)
 {
     if(*this != other)
     {
@@ -133,6 +137,7 @@ polynomial::~polynomial (void)
 {
     //destructor is not required.
 }
+
 //////////////////
 
 
@@ -140,7 +145,7 @@ std::ostream& operator<< (std::ostream& out, const polynomial& obj)
 {
     if(obj.coeff.empty())
     {
-        throw "empty";
+        std::cout << "Полином пуст" << std::endl;
         return out;
     }
     auto b = obj.coeff.end(); --b;
