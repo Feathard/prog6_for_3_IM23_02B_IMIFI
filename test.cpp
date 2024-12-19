@@ -2,6 +2,7 @@
 #include <vector>
 
 #include "include/polynomiac_basic.hpp"
+#define POLYNOMIAC_BASIC_HPP_OPERATIONS
 
 int main (int argc, char ** argv)
 {
@@ -12,5 +13,6 @@ int main (int argc, char ** argv)
     std::cout << P << std::endl;
     P.special_out(std::cout);
     P.special_out(fout);
+    fout.close();
     return 0;
 }

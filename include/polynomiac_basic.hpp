@@ -25,7 +25,8 @@ public:
     // * в диапозоне от range_min до range_max | done
     polynomial (unsigned dg);   /// Инициализация с преаллокацией
     polynomial (std::vector<double>);
-#if POLYNOMIAC_BASIC_HPP_OPERATIONS
+#if POLYNOMIAC_BASIC_HPP_OPERATIONS // TODO : Реализовать все эти операции
+#define POLYNOMIAC_BASIC_HPP_OPERATIONS
     polynomial operator+ (polynomial&) const;   /// Сложение многочленов
     polynomial operator- (polynomial&) const;   /// Вычитание многочленов 
     polynomial operator+ (void) const; /// Сложение многочленов
