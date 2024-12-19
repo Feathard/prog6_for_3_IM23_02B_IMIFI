@@ -25,7 +25,7 @@ public:
     // * в диапозоне от range_min до range_max | done
     polynomial (unsigned dg);   /// Инициализация с преаллокацией
     polynomial (std::vector<double>);
-#if POLYNOMIAL_BASIC_HPP_OPERATIONS
+#if POLYNOMIAC_BASIC_HPP_OPERATIONS
     polynomial operator+ (polynomial&) const;   /// Сложение многочленов
     polynomial operator- (polynomial&) const;   /// Вычитание многочленов 
     polynomial operator+ (void) const; /// Сложение многочленов
@@ -39,7 +39,7 @@ public:
     polynomial operator*=(polynomial&); /// Умножение многочленов с присваиванием
     polynomial operator/=(polynomial&); /// Деление многочленов с присваиванием
     polynomial operator%=(polynomial&); /// Остаток от дедения многочленов с присваиванием
-#endif //POLYNOMIAL_BASIC_HPP_OPERATIONS
+#endif //POLYNOMIAC_BASIC_HPP_OPERATIONS
     
     polynomial& operator= (polynomial&);         /// Присваивание многочлена | done
     bool operator==(polynomial&) const; /// Сравнение многочленов | done

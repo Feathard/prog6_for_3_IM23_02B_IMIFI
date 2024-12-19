@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/prog6_3_im23_02b.dir/test.cpp.o CMakeFiles/prog6_3_im23_02b.dir/include/polynomiac_basic.cpp.o CMakeFiles/prog6_3_im23_02b.dir/include/polynomiac_basic_operations.cpp.o -o prog6_3_im23_02b 
