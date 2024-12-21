@@ -6,7 +6,7 @@ polynomial::polynomial ( std::vector<double> vec) : coeff(vec), deegree(vec.size
 
 polynomial::polynomial (unsigned dg) : deegree(dg), coeff(dg+1) {}
 
-polynomial::polynomial (polynomial & other) : deegree(other.deegree), coeff(other.coeff) {}
+polynomial::polynomial (const polynomial & other) : deegree(other.deegree), coeff(other.coeff) {}
 
 polynomial::polynomial (std::initializer_list<double> il) : deegree (il.size()-1)
 {

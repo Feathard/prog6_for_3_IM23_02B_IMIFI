@@ -19,7 +19,7 @@ class polynomial
 public:
     polynomial (void);          /// Конструктор по умолчанию | done
     polynomial (std::istream&); /// Конструктор чтения из потока | done
-    polynomial (polynomial &);  /// Конструктор копирования | done
+    polynomial (const polynomial &);  /// Конструктор копирования | done
     polynomial (std::initializer_list<double>); /// Конструктор с определением коэффицентов
     polynomial (int range_min, int range_max, unsigned deg); /// Инициализация многочлена степени deg и коэффицентам 
     // * в диапозоне от range_min до range_max | done
