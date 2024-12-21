@@ -1,6 +1,5 @@
 #include "polynomiac_basic.hpp"
 
-//#if POLYNOMIAC_BASIC_HPP_OPERATIONS
 
 polynomial polynomial::operator+ (const polynomial& other) const
 {
@@ -62,6 +61,4 @@ polynomial polynomial::operator*= (const polynomial& other)
     return *this;
 }
 
-
-//#endif // POLYNOMIAC_BASIC_HPP_OPERATIONS
 
