@@ -6,7 +6,7 @@ polynomial::polynomial ( std::vector<double> vec) : coeff(vec), deegree(vec.size
 
 polynomial::polynomial (unsigned dg) : deegree(dg), coeff(dg+1) {}
 
-polynomial::polynomial (polynomial & other) : deegree(other.deegree), coeff(other.coeff) {}
+polynomial::polynomial (const polynomial & other) : deegree(other.deegree), coeff(other.coeff) {}
 
 polynomial::polynomial (std::initializer_list<double> il) : deegree (il.size()-1)
 {
@@ -48,12 +48,12 @@ polynomial::polynomial (int range_min, int range_max, unsigned dg) : deegree(dg)
     calculate();
 }
 
-bool polynomial::operator!= (polynomial & other) const
+bool polynomial::operator!= (const polynomial & other) const
 {
     return (deegree != other.deegree) or (coeff != other.coeff);
 }
 
-polynomial& polynomial::operator= (polynomial & other)
+polynomial& polynomial::operator= (const polynomial & other)
 {
     if(*this != other)
     {
@@ -84,7 +84,7 @@ void polynomial::calculate ( void )
     deegree = coeff.size()-1;
 }
 
-bool polynomial::operator== (polynomial & other) const
+bool polynomial::operator== (const polynomial & other) const
 {
     return (deegree == other.deegree) and (coeff == other.coeff);
 }
@@ -161,4 +161,11 @@ std::ostream& operator<< (std::ostream& out, const polynomial& obj)
 unsigned deg( const polynomial& P )
 {
     return P.deegree;
+}
+
+polynomial x_monomial (const unsigned deg, const double coeff)
+{
+    polynomial res(deg);
+    res.set(deg, coeff);
+    return res;
 }

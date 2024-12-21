@@ -21,31 +21,29 @@ class polynomial
 public:
     polynomial (void);          /// Конструктор по умолчанию | done
     polynomial (std::istream&); /// Конструктор чтения из потока | done
-    polynomial (polynomial &);  /// Конструктор копирования | done
+    polynomial (const polynomial &);  /// Конструктор копирования | done
     polynomial (std::initializer_list<double>); /// Конструктор с определением коэффицентов
     polynomial (int range_min, int range_max, unsigned deg); /// Инициализация многочлена степени deg и коэффицентам 
     // * в диапозоне от range_min до range_max | done
     polynomial (unsigned dg);   /// Инициализация с преаллокацией
     polynomial (std::vector<double>);
 //#if POLYNOMIAC_BASIC_HPP_OPERATIONS
-    polynomial operator+ (polynomial&) const;   /// Сложение многочленов
-    polynomial operator- (polynomial&) const;   /// Вычитание многочленов 
-    polynomial operator+ (void) const; /// Сложение многочленов
-    polynomial operator- (void) const; /// Вычитание многочленов 
-    polynomial operator* (polynomial&) const;   /// Произведение многочленов
-    polynomial operator/ (polynomial&) const;   /// Деление многочленов (основная часть)
-    polynomial operator% (polynomial&) const;   /// Деление многочленов (остаток)
-    polynomial derivative(polynomial&) const ;  /// Произваодная многочлена
-    polynomial operator+=(polynomial&); /// Прибавление многочлена с присваиванием
-    polynomial operator-=(polynomial&); /// Вычитание многочлена с присваиванием
-    polynomial operator*=(polynomial&); /// Умножение многочленов с присваиванием
-    polynomial operator/=(polynomial&); /// Деление многочленов с присваиванием
-    polynomial operator%=(polynomial&); /// Остаток от дедения многочленов с присваиванием
+    polynomial operator+ (const polynomial&) const;   /// Сложение многочленов
+    polynomial operator- (const polynomial&) const;   /// Вычитание многочленов 
+    polynomial operator* (const polynomial&) const;   /// Произведение многочленов
+    polynomial operator/ (const polynomial&) const;   /// Деление многочленов (основная часть)
+    polynomial operator% (const polynomial&) const;   /// Деление многочленов (остаток)
+    polynomial operator+=(const polynomial&); /// Прибавление многочлена с присваиванием
+    polynomial operator-=(const polynomial&); /// Вычитание многочлена с присваиванием
+    polynomial operator*=(const polynomial&); /// Умножение многочленов с присваиванием
+    polynomial operator/=(const polynomial&); /// Деление многочленов с присваиванием
+    polynomial operator%=(const polynomial&); /// Остаток от дедения многочленов с присваиванием
+    polynomial derivative(void) const ;  /// Произваодная многочлена
 //#endif //POLYNOMIAC_BASIC_HPP_OPERATIONS
     
-    polynomial& operator= (polynomial&);         /// Присваивание многочлена | done
-    bool operator==(polynomial&) const; /// Сравнение многочленов | done
-    bool operator!=(polynomial&) const; /// Сравнение многочленов | done
+    polynomial& operator= (const polynomial&);         /// Присваивание многочлена | done
+    bool operator==(const polynomial&) const; /// Сравнение многочленов | done
+    bool operator!=(const polynomial&) const; /// Сравнение многочленов | done
     
     double at (unsigned) const;         /// * Возвращает значение соответствующего коэффицента (аналог геттера) | done
     void set (unsigned, double);       
@@ -58,4 +56,7 @@ public:
     friend class PolynomialOperations;
     friend class MenuManager;
 };
+
+polynomial x_monomial (const unsigned, const double);
+
 #endif // POLYNOMIAC_BASIC_HPP
