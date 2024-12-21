@@ -10,6 +10,6 @@ int main (int argc, char ** argv)
     polynomial P({2, 1});
     polynomial Q({44, 12, 8, 54, 88, 32});
     polynomial S = x_monomial (4, 077);
-    std::cout << "deg:" << deg(S) << std::endl << S << std::endl;
+    std::cout << "deg:" << deg(S) << std::endl << S << " " << std::endl;
     return 0;
 }
