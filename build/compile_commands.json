@@ -8,10 +8,5 @@
   "directory": "/home/mcf/Documents/prog6_for_3_IM23_02B_IMIFI/build",
   "command": "/usr/bin/g++ -g -o CMakeFiles/prog6_3_im23_02b.dir/include/polynomiac_basic.cpp.o -c /home/mcf/Documents/prog6_for_3_IM23_02B_IMIFI/include/polynomiac_basic.cpp",
   "file": "/home/mcf/Documents/prog6_for_3_IM23_02B_IMIFI/include/polynomiac_basic.cpp"
-},
-{
-  "directory": "/home/mcf/Documents/prog6_for_3_IM23_02B_IMIFI/build",
-  "command": "/usr/bin/g++ -g -o CMakeFiles/prog6_3_im23_02b.dir/include/polynomiac_basic_operations.cpp.o -c /home/mcf/Documents/prog6_for_3_IM23_02B_IMIFI/include/polynomiac_basic_operations.cpp",
-  "file": "/home/mcf/Documents/prog6_for_3_IM23_02B_IMIFI/include/polynomiac_basic_operations.cpp"
 }
 ]
