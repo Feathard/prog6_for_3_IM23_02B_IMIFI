@@ -29,6 +29,8 @@ public:
     polynomial (std::vector<double>);
     polynomial operator+ (const polynomial&) const;   /// Сложение многочленов
     polynomial operator- (const polynomial&) const;   /// Вычитание многочленов 
+    polynomial operator+ () const;   /// Сложение многочленов
+    polynomial operator- () const;   /// Вычитание многочленов 
     polynomial operator* (const polynomial&) const;   /// Произведение многочленов
     polynomial operator/ (const polynomial&) const;   /// Деление многочленов (основная часть)
     polynomial operator% (const polynomial&) const;   /// Деление многочленов (остаток)

@@ -1,5 +1,17 @@
 #include "polynomiac_basic.hpp"
 
+polynomial polynomial::operator+ ( void ) const
+{
+    return *this;
+}
+
+polynomial polynomial::operator- ( void ) const
+{
+    polynomial res = *this;
+    for (unsigned index = 0; index < res.coeff.size(); ++index)
+        res.coeff[index] = -res.coeff[index];
+    return res;
+}
 
 polynomial polynomial::operator+ (const polynomial& other) const
 {
@@ -17,15 +29,7 @@ polynomial polynomial::operator+ (const polynomial& other) const
 
 polynomial polynomial::operator- (const polynomial& other) const
 {
-    polynomial maxp = (other.deegree>this->deegree)?other:*this;
-    polynomial minp = (other.deegree>this->deegree)?*this:other;
-    polynomial res(maxp.deegree);
-    for (unsigned index = 0; index <= minp.deegree; ++index)
-        res.coeff[index] = this->coeff[index] - other.coeff[index];
-    for (unsigned index = minp.deegree + 1; index <= maxp.deegree; ++index)
-        res.coeff[index] = -maxp.coeff[index];
-    res.calculate();
-    return res;
+    return *this + (-other);
 }
 
 polynomial polynomial::operator+= (const polynomial& other)

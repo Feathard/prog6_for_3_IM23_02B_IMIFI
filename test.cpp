@@ -11,7 +11,7 @@ int main (int argc, char ** argv)
     for(unsigned index = 0; index < 15; ++index)
     {
         std::cout << std::endl << Q << " " << std::endl;
-        Q += polynomial{2};
+        Q -= polynomial{2, 0, 0, 43};
     }
     return 0;
 }
