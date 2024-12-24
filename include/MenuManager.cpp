@@ -1,4 +1,4 @@
-#include "MenuManager.h"
+#include "MenuManager.hpp"
 // Метод для запуска меню
 void MenuManager::run() {
     int choice; // Переменная для выбора действия пользователя
