@@ -31,9 +31,9 @@
 *.out
 *.app
 
-build
+/build/
 .vscode
 p.csv
 base.csv
-out
+/out/
 CMakePresets.json

@@ -153,30 +153,6 @@ include/polynomiac_basic.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog6_3_im23_02b.dir/build.make CMakeFiles/prog6_3_im23_02b.dir/include/polynomiac_basic.cpp.s
 .PHONY : include/polynomiac_basic.cpp.s
 
-include/polynomiac_basic_operations.o: include/polynomiac_basic_operations.cpp.o
-.PHONY : include/polynomiac_basic_operations.o
-
-# target to build an object file
-include/polynomiac_basic_operations.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog6_3_im23_02b.dir/build.make CMakeFiles/prog6_3_im23_02b.dir/include/polynomiac_basic_operations.cpp.o
-.PHONY : include/polynomiac_basic_operations.cpp.o
-
-include/polynomiac_basic_operations.i: include/polynomiac_basic_operations.cpp.i
-.PHONY : include/polynomiac_basic_operations.i
-
-# target to preprocess a source file
-include/polynomiac_basic_operations.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog6_3_im23_02b.dir/build.make CMakeFiles/prog6_3_im23_02b.dir/include/polynomiac_basic_operations.cpp.i
-.PHONY : include/polynomiac_basic_operations.cpp.i
-
-include/polynomiac_basic_operations.s: include/polynomiac_basic_operations.cpp.s
-.PHONY : include/polynomiac_basic_operations.s
-
-# target to generate assembly for a file
-include/polynomiac_basic_operations.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog6_3_im23_02b.dir/build.make CMakeFiles/prog6_3_im23_02b.dir/include/polynomiac_basic_operations.cpp.s
-.PHONY : include/polynomiac_basic_operations.cpp.s
-
 test.o: test.cpp.o
 .PHONY : test.o
 
@@ -213,9 +189,6 @@ help:
 	@echo "... include/polynomiac_basic.o"
 	@echo "... include/polynomiac_basic.i"
 	@echo "... include/polynomiac_basic.s"
-	@echo "... include/polynomiac_basic_operations.o"
-	@echo "... include/polynomiac_basic_operations.i"
-	@echo "... include/polynomiac_basic_operations.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"

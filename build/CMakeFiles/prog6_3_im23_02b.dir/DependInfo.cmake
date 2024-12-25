@@ -9,7 +9,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/fer/Documents/prog6_for_3_IM23_02B_IMIFI/include/polynomiac_basic.cpp" "CMakeFiles/prog6_3_im23_02b.dir/include/polynomiac_basic.cpp.o" "gcc" "CMakeFiles/prog6_3_im23_02b.dir/include/polynomiac_basic.cpp.o.d"
-  "/home/fer/Documents/prog6_for_3_IM23_02B_IMIFI/include/polynomiac_basic_operations.cpp" "CMakeFiles/prog6_3_im23_02b.dir/include/polynomiac_basic_operations.cpp.o" "gcc" "CMakeFiles/prog6_3_im23_02b.dir/include/polynomiac_basic_operations.cpp.o.d"
   "/home/fer/Documents/prog6_for_3_IM23_02B_IMIFI/test.cpp" "CMakeFiles/prog6_3_im23_02b.dir/test.cpp.o" "gcc" "CMakeFiles/prog6_3_im23_02b.dir/test.cpp.o.d"
   )
 

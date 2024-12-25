@@ -81,12 +81,12 @@ clean: CMakeFiles/prog6_3_im23_02b.dir/clean
 CMakeFiles/prog6_3_im23_02b.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog6_3_im23_02b.dir/build.make CMakeFiles/prog6_3_im23_02b.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog6_3_im23_02b.dir/build.make CMakeFiles/prog6_3_im23_02b.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fer/Documents/prog6_for_3_IM23_02B_IMIFI/build/CMakeFiles --progress-num=1,2,3,4 "Built target prog6_3_im23_02b"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fer/Documents/prog6_for_3_IM23_02B_IMIFI/build/CMakeFiles --progress-num=1,2,3 "Built target prog6_3_im23_02b"
 .PHONY : CMakeFiles/prog6_3_im23_02b.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/prog6_3_im23_02b.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fer/Documents/prog6_for_3_IM23_02B_IMIFI/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fer/Documents/prog6_for_3_IM23_02B_IMIFI/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/prog6_3_im23_02b.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/fer/Documents/prog6_for_3_IM23_02B_IMIFI/build/CMakeFiles 0
 .PHONY : CMakeFiles/prog6_3_im23_02b.dir/rule
