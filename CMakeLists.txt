@@ -11,5 +11,3 @@ add_executable(prog6_3_im23_02b
     include/polynomiac_basic_operations.cpp
     include/PolynomialOperations.cpp
 )
-
-#TODO : Добавить сюда свои файлы для компиляции

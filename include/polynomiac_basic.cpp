@@ -48,12 +48,12 @@ polynomial::polynomial (int range_min, int range_max, unsigned dg) : deegree(dg)
     calculate();
 }
 
-bool polynomial::operator!= (polynomial & other) const
+bool polynomial::operator!= ( const polynomial & other) const
 {
     return (deegree != other.deegree) or (coeff != other.coeff);
 }
 
-polynomial& polynomial::operator= (polynomial & other)
+polynomial& polynomial::operator= (const polynomial & other)
 {
     if(*this != other)
     {
@@ -84,7 +84,7 @@ void polynomial::calculate ( void )
     deegree = coeff.size()-1;
 }
 
-bool polynomial::operator== (polynomial & other) const
+bool polynomial::operator== (const polynomial & other) const
 {
     return (deegree == other.deegree) and (coeff == other.coeff);
 }
@@ -161,4 +161,11 @@ std::ostream& operator<< (std::ostream& out, const polynomial& obj)
 unsigned deg( const polynomial& P )
 {
     return P.deegree;
+}
+
+polynomial x_monomial (unsigned dg, double a)
+{
+    polynomial res(0);
+    res.set(dg, a);
+    return res;
 }

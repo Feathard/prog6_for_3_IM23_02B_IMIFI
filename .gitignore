@@ -35,5 +35,7 @@
 .vscode
 p.csv
 base.csv
-/out/
-CMakePresets.json
+/cmake-build-debug/
+/.idea/
+/.vs/
+/CMakePresets.json

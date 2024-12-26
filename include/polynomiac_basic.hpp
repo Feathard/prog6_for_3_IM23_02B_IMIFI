@@ -26,9 +26,23 @@ public:
     polynomial (unsigned dg);   // * Инициализация с преаллокацией
     polynomial (std::vector<double>);
     
-    polynomial& operator= (polynomial&);// * Присваивание многочлена | done
-    bool operator==(polynomial&) const; // * Сравнение многочленов | done
-    bool operator!=(polynomial&) const; // * Сравнение многочленов | done
+    polynomial operator+ () const;
+    polynomial operator- () const;
+    polynomial operator+ (const polynomial& other) const;
+    polynomial operator- (const polynomial& other) const;
+    polynomial operator+= (const polynomial& other);
+    polynomial operator-= (const polynomial& other);
+    polynomial operator* (const polynomial& other) const;
+    polynomial operator*= (const polynomial& other);
+    polynomial derivative () const;
+    polynomial operator/ (const polynomial& other) const;
+    polynomial operator% (const polynomial& other) const;
+    polynomial operator/= (const polynomial& other);
+    polynomial operator%= (const polynomial& other);
+
+    polynomial& operator= (const polynomial&);// * Присваивание многочлена | done
+    bool operator==(const polynomial&) const; // * Сравнение многочленов | done
+    bool operator!=(const polynomial&) const; // * Сравнение многочленов | done
     
     double at (unsigned) const;         // * Возвращает значение соответствующего коэффицента (аналог геттера) | done
     void set (unsigned, double);       
@@ -41,4 +55,8 @@ public:
     friend class PolynomialOperations;
     friend class MenuManager;
 };
+
+const polynomial ZERO = polynomial{0};
+
+polynomial x_monomial (unsigned, double);
 #endif // POLYNOMIAC_BASIC_HPP
