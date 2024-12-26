@@ -4,7 +4,7 @@
 MenuManager manager;
 int main(int, char**)
 {
+    system("clear");
     manager.run();
-
     return 0;
 }
