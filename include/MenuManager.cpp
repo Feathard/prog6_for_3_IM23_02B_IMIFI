@@ -56,7 +56,7 @@ void MenuManager::run() {
                 addPolynomialFromInput(); // Добавляем полином из входных данных
                 break;
             case 3:
-            //    addPolynomialFromFile(); // Добавляем полином из файла
+                addPolynomialsFromFile(); // Добавляем полином из файла
                 break;
             case 4:
                 removePolynomial(); // Удаляем полином
@@ -76,6 +76,49 @@ void MenuManager::run() {
                 std::cout << "Неверный ввод\n"; // Обработка некорректного ввода
         }
     }
+}
+
+void MenuManager::addPolynomialsFromFile()
+{
+    std::cout << "Введите имя файла (с расширением), с которого импортировать полиномы:" << std::endl;
+    std::string tmp; std::cin >> tmp;
+    std::ifstream fin(tmp);
+    if(not fin.is_open())
+    {
+        std::cout << "Не вышло открыть файл " << tmp << std::endl;
+        return;
+    }
+
+    std::vector<polynomial> pv;
+    std::stringstream ss;
+    while(std::getline(fin, tmp, '\n'))
+    {
+        ss = std::stringstream(tmp);
+        pv.push_back(polynomial(ss));
+    }
+    if(not pv.empty())
+    {
+        std::cout << "Удалось импортировать следующие полиномы:" << std::endl;
+        for(auto& index : pv)
+            std::cout << index << std::endl;
+    }
+    else
+    {
+        std::cout << "Не удалось найти полиномы" << std::endl;
+        return;
+    }
+    std::cout << "Внести их в список полиномов? [Y/N]";
+    char ch; std::cin >> ch;
+    if(ch == 'Y' or ch == 'y')
+    {
+        for(auto& index : pv)polynomials.push_back(index);
+        std::cout << "Импортированно." <<std::endl;
+    }
+    else
+    {
+        std::cout << "Импорт отменён" << std::endl;
+    }
+    fin.close();
 }
 
 // Метод для добавления случайного полинома

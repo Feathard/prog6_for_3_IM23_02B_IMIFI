@@ -2,6 +2,8 @@
 #define MENUMANAGER_HPP
 
 #include <iostream>
+#include <sstream>
+#include <algorithm>
 #include "polynomiac_basic.hpp"         // Подключаем класс Полинома
 //#include "вставить сюда.h" // Подключаем класс Операций Над полиномами
 
@@ -14,6 +16,7 @@ private:
     std::vector<polynomial> polynomials; // Вектор для хранения полиномов
 
     void addRandomPolynomial(int range_min, int range_max, unsigned degree); // Добавление случайного полинома
+    void addPolynomialsFromFile(); // Импорт полиномов из файла
     void addPolynomialFromInput(); // Добавление полинома из входных данных
     void removePolynomial(); // Удаление полинома
     void listPolynomials(); // Вывод списка полиномов
