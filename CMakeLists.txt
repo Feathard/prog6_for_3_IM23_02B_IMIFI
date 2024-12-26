@@ -4,11 +4,10 @@ set(CMAKE_CXX_STANDARD 23)
 include_directories(include)
 
 add_executable(prog6_3_im23_02b
-    test.cpp
+    main.cpp
     include/polynomiac_basic.cpp
     include/MenuManager.cpp
     include/polynomiac_basic.cpp
     include/polynomiac_basic_operations.cpp
     include/PolynomialOperations.cpp
-        main.cpp
 )

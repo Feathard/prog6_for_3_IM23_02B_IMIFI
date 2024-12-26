@@ -15,7 +15,6 @@ private:
 
     void addRandomPolynomial(int range_min, int range_max, unsigned degree); // Добавление случайного полинома
     void addPolynomialFromInput(); // Добавление полинома из входных данных
-    void addPolynomialFromFile(); // Добавление полинома из файла
     void removePolynomial(); // Удаление полинома
     void listPolynomials(); // Вывод списка полиномов
     void performOperations(); // Выполнение операций над полиномами
