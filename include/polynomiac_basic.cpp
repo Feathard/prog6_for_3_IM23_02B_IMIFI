@@ -70,6 +70,7 @@ void polynomial::calculate ( void )
         deegree = 0;
         return;
     }
+    
     auto e = coeff.begin(); --e;
     auto b = coeff.end(); --b;
 
@@ -79,7 +80,7 @@ void polynomial::calculate ( void )
             ++b;
             break;
         }
-    
+
     coeff.erase(b, coeff.end());
     deegree = coeff.size()-1;
 }

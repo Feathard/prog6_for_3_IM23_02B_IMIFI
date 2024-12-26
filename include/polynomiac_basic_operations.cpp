@@ -82,13 +82,14 @@ polynomial polynomial::operator/ (const polynomial& other) const
     if(other == ZERO)throw std::runtime_error("Devide by ZERO");
     if(other.deegree == 0) return (*this)*polynomial{1 / other.coeff[0]};
     if(this->deegree < other.deegree)return q;
-    for(unsigned index = this->deegree; index >= other.deegree; --index)
+    for(unsigned index = this->deegree; index > other.deegree; --index)
         if(r.coeff[index]!=0)
         {
             polynomial tmp = x_monomial(index - other.deegree, r.coeff[index]/ other.coeff[other.deegree]);
             q += tmp;
             r -= tmp*other;
         }
+    q.calculate();
     return q;
 }
 
@@ -96,7 +97,7 @@ polynomial polynomial::operator% (const polynomial& other) const
 {
     polynomial q{0}, r=*this;
     if(other == ZERO)throw std::runtime_error("Devide by ZERO");
-    if(other.deegree == 0) return (*this)*polynomial{0};
+    if(other.deegree == 0) return (*this)*polynomial{1/other.at(0)};
     if(this->deegree < other.deegree)return r;
     for(unsigned index = this->deegree; index >= other.deegree; --index)
         if(r.coeff[index]!=0)
@@ -105,6 +106,7 @@ polynomial polynomial::operator% (const polynomial& other) const
             q += tmp;
             r -= tmp*other;
         }
+    r.calculate();
     return r;
 }
 
