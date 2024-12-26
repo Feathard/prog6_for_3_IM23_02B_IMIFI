@@ -71,6 +71,12 @@ void polynomial::calculate ( void )
         return;
     }
     
+    if(coeff.size() == 1)
+    {
+        deegree = 0;
+        return;
+    }
+
     auto e = coeff.begin(); --e;
     auto b = coeff.end(); --b;
 
