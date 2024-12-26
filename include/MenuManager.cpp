@@ -1,6 +1,7 @@
-#include "MenuManager.h"
+#include "MenuManager.hpp"
 // Метод для запуска меню
-void MenuManager::run() {
+void MenuManager::run()
+{
     int choice;
 
     // Основной цикл для управления меню
@@ -73,12 +74,13 @@ void MenuManager::removePolynomial() {
 void MenuManager::listPolynomials() {
     for (size_t i = 0; i < polynomials.size(); ++i) {
         std::cout << "Полином " << i + 1 << ": "; // Нумеруем полиномы
-        polynomials[i].print(); // Выводим полином
+        std::cout << polynomials[i] << std::endl; // Выводим полином
     }
 }
 
 // Метод для выполнения операций над полиномами
-void MenuManager::performOperations() {
+void MenuManager::performOperations() 
+{
     int index1, index2;
     std::cout << "Введите номер первого полинома: ";
     std::cin >> index1; // Считываем номер первого полинома
@@ -86,33 +88,47 @@ void MenuManager::performOperations() {
     std::cin >> index2; // Считываем номер второго полинома
 
     // Проверяем, что индексы находятся в допустимом диапазоне
-    if (index1 > 0 && index1 <= polynomials.size() && index2 > 0 && index2 <= polynomials.size()) {
+    if (index1 > 0 && index1 <= polynomials.size() && index2 > 0 && index2 <= polynomials.size()) 
+    {
         polynomial p1 = polynomials[index1 - 1]; // Получаем первый полином
         polynomial p2 = polynomials[index2 - 1]; // Получаем второй полином
 
         std::cout << "Результат сложения:\n";
-        (p1 + p2).print(); // Выводим результат сложения полиномов см ниже
+        std::cout << (p1 + p2) << std::endl; // Выводим результат сложения полиномов см ниже
 
         std::cout << "Результат вычитания:\n";
-        (p1 - p2).print(); // Выводим результат вычитания полиномов
+        std::cout << (p1 - p2) << std::endl; // Выводим результат вычитания полиномов
 
         std::cout << "Результат умножения:\n";
-        (p1 * p2).print(); // Выводим результат умножения полиномов
+        std::cout << (p1 * p2) << std::endl; // Выводим результат умножения полиномов
 
-        if (p2 != polynomial({ 0 })) { // Проверка на деление на ноль
+        
+        try
+        {
+            polynomial tmp = p1 / p2;
+            std::cout << tmp << std::endl;
+        }
+        catch(const std::runtime_error e)
+        {
+            std::cout << e.what() << std::endl;
+        }
+        
+        
+        /*if (p2 != polynomial({ 0 })) { // Проверка на деление на ноль
             std::cout << "Результат деления:\n";
-            (p1 / p2).print(); // Выводим результат деления полиномов
+            std::cout << (p1 / p2) << std::endl; // Выводим результат деления полиномов
         }
         else {
             std::cout << "Деление на ноль невозможно.\n"; // Сообщение об ошибке
-        }
+        }*/
 
         std::cout << "Производная первого полинома:\n";
-        p1.derivative().print(); // Выводим производную первого полинома
+        std::cout << p1.derivative() << std::endl; // Выводим производную первого полинома
     }
     else {
         std::cout << "Некорректные номера полиномов.\n"; // Сообщение об ошибке при некорректном вводе
     }
+}
 
 
     /* 
@@ -134,5 +150,4 @@ void MenuManager::performOperations() {
         }
     }
     std::cout << std::endl; // Переход на новую строку
-}
     */

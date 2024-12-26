@@ -101,7 +101,7 @@ bool PolynomialOperations :: degree_equal(const polynomial& a, const polynomial&
 
 bool PolynomialOperations :: divisor_not_null(const polynomial& b){
     if (b.deegree == 0 && b.coeff[0] == 0) {
-        throw std::runtime_error("Деление на ноль");
+        throw std::runtime_error("Devide by ZERO");
     }
     return false;
 }

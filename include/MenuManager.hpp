@@ -1,16 +1,9 @@
-<<<<<<< HEAD:include/MenuManager.h
-#ifndef MENUMANAGER_H
-#define MENUMANAGER_H
-
-#include "polynomial.hpp"
-=======
 #ifndef MENUMANAGER_HPP
 #define MENUMANAGER_HPP
 
 #include <iostream>
 #include "polynomiac_basic.hpp"         // Подключаем класс Полинома
 //#include "вставить сюда.h" // Подключаем класс Операций Над полиномами
->>>>>>> a278491c317c250b810598848b0f890cf00ec810:include/MenuManager.hpp
 
 // Класс MenuManager для управления полиномами
 class MenuManager {
