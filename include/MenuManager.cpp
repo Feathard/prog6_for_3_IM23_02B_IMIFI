@@ -18,7 +18,6 @@ void MenuManager::run() {
                   << "0. Выход\n"
                   << "Выберете операцию: ";
         std::cin >> choice; // Считываем выбор пользователя
-
         switch (choice) 
         {
             case 1: 
@@ -30,7 +29,7 @@ void MenuManager::run() {
                 if (min > max)
                 {
                     std::cout << "Ошибка! min должно быть не больше max\nВыход в главное меню" << std::endl;
-                    return;
+                    break;
                 }
                 while(degree < 0)
                 {
@@ -80,7 +79,7 @@ void MenuManager::run() {
 
 void MenuManager::addPolynomialsFromFile()
 {
-    std::cout << "Введите имя файла (с расширением), с которого импортировать полиномы:" << std::endl;
+    std::cout << "Введите имя файла (с расширением), из которого импортировать полиномы:" << std::endl;
     std::string tmp; std::cin >> tmp;
     std::ifstream fin(tmp);
     if(not fin.is_open())
@@ -107,7 +106,7 @@ void MenuManager::addPolynomialsFromFile()
         std::cout << "Не удалось найти полиномы" << std::endl;
         return;
     }
-    std::cout << "Внести их в список полиномов? [Y/N]";
+    std::cout << "Внести их в список полиномов? [Y/N] ";
     char ch; std::cin >> ch;
     if(ch == 'Y' or ch == 'y')
     {
